@@ -1,8 +1,9 @@
-package dzianis.trakhimik.vocabulary
+package dzianis.trakhimik.vocabulary.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -10,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import dzianis.trakhimik.vocabulary.ui.components.ListItem
 import dzianis.trakhimik.vocabulary.ui.theme.VocabularyTheme
 
 class MainActivity : ComponentActivity() {
@@ -31,10 +33,14 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+    Column {
+        ListItem()
+        Text(
+            text = "Hello $name!",
+            modifier = modifier
+        )
+    }
+
 }
 
 @Preview(showBackground = true)
